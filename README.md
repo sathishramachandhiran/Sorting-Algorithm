@@ -5,6 +5,11 @@ To write a program to perform selection sort and insertion sort using python pro
 1.	Hardware – PCs
 2.	Anaconda – Python 3.7 Installation / Moodle-Code Runner
 ## Algorithm:
+
+ 1.Get the list of nums as input.
+ 2.Use the sort() function to find selection sort and insertion sort.
+ 3.Print the value.
+
 ## Selection Sort Algorithm:
 1.	Set the first unsorted element as the minimum
 2.	For each of the unsorted elements, check if the element < current minimum.
@@ -19,25 +24,53 @@ To write a program to perform selection sort and insertion sort using python pro
 5.	Repeat the steps 2 to 4 for sorting all the elements in the array.
 ## Program:
 i)	#Selection Sort
-```
-
-
-
-
-
+```python
+''' 
+Program to sort the elements in the list using the Selection Sort algorithm.
+Developed by: your name
+RegisterNumber: 
+'''
+def selection_sort(nums):
+    for i in range(len(nums)):
+        lowest_value_index = i
+        for j in range(i+1,len(nums)):
+            if nums[j]<nums[lowest_value_index]:
+                lowest_value_index = j
+        nums[i],nums[lowest_value_index]=nums[lowest_value_index],nums[i]
+        
+list_of_nums = eval(input())
+selection_sort(list_of_nums)
+print(list_of_nums)
 ```
 ii)	#Insertion Sort
-```
-
-
-
-
-
-
+```python
+''' 
+Program to sort the elements in the list using the Insertion Sort algorithm.
+Developed by: SATHISH R
+RegisterNumber: 22009045
+'''
+def insertion_sort(nums):
+   for i in range(1,len(nums)):
+       item_to_insert=nums[i]
+       j=i-1
+       while j>=0 and nums[j]>item_to_insert:
+           nums[j+1]=nums[j]
+           j-=1
+       nums[j+1]=item_to_insert
+        
+list_of_nums = eval(input())
+insertion_sort(list_of_nums)
+print(list_of_nums)
 ```
 
 ## Output:
+#Selection Sort
 
+![ss](https://user-images.githubusercontent.com/120574768/214632558-d60af846-2f42-4883-b0cb-df08f2c8fab6.png)
+
+#Insertion Sort
+
+![is](https://user-images.githubusercontent.com/120574768/214632582-768beb65-dded-4501-96dd-b5adeacc5afd.png)
 
 ## Result:
 Thus the program is written to perform selection sort and insertion sort using python programming.
